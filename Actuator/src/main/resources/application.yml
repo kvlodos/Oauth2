@@ -1,0 +1,11 @@
+server:
+  port: 7070
+
+management:
+  server:
+    servlet:
+      context-path: /app
+  endpoints:
+    web:
+      exposure:
+        exclude: "health"
