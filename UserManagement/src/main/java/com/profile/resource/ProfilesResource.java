@@ -14,11 +14,12 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import com.oauth.commons.model.Profile;
-import com.profile.reposistory.ProfileReposistory;
 import com.profile.service.ProfileService;
 
+@Controller
 @Path("profiles")
 public class ProfilesResource {
 
