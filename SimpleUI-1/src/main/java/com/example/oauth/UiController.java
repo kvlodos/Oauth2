@@ -3,7 +3,8 @@
  */
 package com.example.oauth;
 
-import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,7 +17,8 @@ public class UiController {
 	}
 	
 	@RequestMapping("/secure")
-	public String secure() {
+	public String secure(HttpServletRequest request) {
+		System.out.println(request.getUserPrincipal());
 		return "secure.html";
 	}
 	
